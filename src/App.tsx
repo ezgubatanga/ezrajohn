@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
+import './App.css'
+
 /** Unsplash — abstract React-related artwork (stable public URL) */
 const heroImg =
-  "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=340&h=358&q=80"
-import './App.css'
+  'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=340&h=358&q=80'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,9 +19,10 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>Welcome</h1>
           <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+            You are running the Vite + React starter. Change this section in{' '}
+            <code>src/App.tsx</code> whenever you are ready to build your homepage.
           </p>
         </div>
         <button
