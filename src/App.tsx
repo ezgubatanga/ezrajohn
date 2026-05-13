@@ -25,8 +25,8 @@ function App() {
           <TheInfiniteGrid />
         </div>
 
-        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 md:px-10">
-          <div className="flex w-full items-center justify-between gap-3">
+        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 md:px-10 md:flex-row md:items-center md:justify-between md:gap-4">
+          <div className="flex w-full items-center justify-between gap-3 md:w-auto">
             <a
               href="#top"
               className="text-sm font-semibold tracking-tight text-foreground"
@@ -40,7 +40,7 @@ function App() {
           </div>
 
           <nav
-            className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-2 overflow-x-auto [scrollbar-width:none] sm:justify-start sm:overflow-visible [&::-webkit-scrollbar]:hidden"
+            className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-2 overflow-x-auto [scrollbar-width:none] sm:justify-start sm:overflow-visible md:w-auto [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
             <div className="hidden items-center gap-1 rounded-full text-sm font-semibold text-emerald-500 lg:inline-flex animate-pulse">
