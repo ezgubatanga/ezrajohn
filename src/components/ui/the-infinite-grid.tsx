@@ -117,10 +117,9 @@ and modern design to help businesses grow online.
         <div className="pointer-events-auto flex gap-4">
           <button
             type="button"
-            onClick={() => setCount((c) => c + 1)}
             className="rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 active:scale-95"
           >
-            Projects ({count})
+            View Projects (7)
           </button>
           <button
             type="button"
