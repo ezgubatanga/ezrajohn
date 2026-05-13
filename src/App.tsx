@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import { supabase } from '@/lib/supabase'
 
 import profilePhoto from '@/assets/me.webp'
 import { LayoutPreloader } from '@/components/ui/layout-preloader'
@@ -25,6 +26,7 @@ function App() {
     phone: '',
     message: '',
   })
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   return (
     <LayoutPreloader>
@@ -204,9 +206,25 @@ function App() {
 
             <form
               className="mt-8 grid gap-4"
-              onSubmit={(event) => {
+              onSubmit={async (event) => {
                 event.preventDefault()
-                console.log('Contact form data:', contactData)
+                setFormStatus('loading')
+                const { error } = await supabase
+                  .from('contact_submissions')
+                  .insert({
+                    full_name: contactData.fullName,
+                    email: contactData.email,
+                    country_code: contactData.countryCode,
+                    phone: contactData.phone || null,
+                    message: contactData.message,
+                  })
+                if (error) {
+                  console.error(error)
+                  setFormStatus('error')
+                } else {
+                  setFormStatus('success')
+                  setContactData({ fullName: '', email: '', countryCode: '+63', phone: '', message: '' })
+                }
               }}
             >
               <div className="grid gap-4 sm:grid-cols-2">
@@ -301,10 +319,16 @@ function App() {
                 />
               </label>
 
-              <div className="mt-4">
-                <Button type="submit" className="w-full sm:w-auto">
-                  Send message
+              <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Button type="submit" disabled={formStatus === 'loading'} className="w-full sm:w-auto">
+                  {formStatus === 'loading' ? 'Sending…' : 'Send message'}
                 </Button>
+                {formStatus === 'success' && (
+                  <p className="text-sm font-medium text-emerald-500">Message sent! I'll get back to you soon.</p>
+                )}
+                {formStatus === 'error' && (
+                  <p className="text-sm font-medium text-red-500">Something went wrong. Please try again.</p>
+                )}
               </div>
             </form>
           </section>
