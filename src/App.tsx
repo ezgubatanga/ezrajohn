@@ -24,25 +24,25 @@ function App() {
           <TheInfiniteGrid />
         </div>
 
-        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 md:flex-row md:items-center md:justify-between md:gap-4 md:px-10">
-          <div className="flex items-center justify-between gap-3 w-full md:flex-none">
+        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:px-10">
+          <div className="flex w-full items-center justify-between gap-3">
             <a
               href="#top"
               className="text-sm font-semibold tracking-tight text-foreground"
             >
               Ezra Digital Solutions
             </a>
-            <div className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-500 md:hidden animate-pulse">
+            <div className="inline-flex items-center gap-1 rounded-full px-1 py-0.5 text-[10px] font-semibold text-emerald-500 lg:hidden animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
           </div>
 
           <nav
-            className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-0 overflow-x-auto [scrollbar-width:none] md:flex-1 md:justify-end md:gap-x-2 md:overflow-visible [&::-webkit-scrollbar]:hidden"
+            className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-0 overflow-x-auto [scrollbar-width:none] sm:w-auto sm:justify-end sm:gap-x-2 sm:overflow-visible [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
-            <div className="hidden items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold text-emerald-500 md:inline-flex animate-pulse">
+            <div className="hidden items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:inline-flex animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
@@ -75,6 +75,9 @@ function App() {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a href="#paid-ads">Paid Ads</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="https://eventful.page" target="_blank" rel="noreferrer">Eventful</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a href="#seo">SEO</a>
@@ -126,6 +129,10 @@ function App() {
               <li id="paid-ads" className="scroll-mt-24">
                 <h3 className="font-medium text-foreground">Paid Ads</h3>
                 <p className="mt-1 text-muted-foreground">Describe paid media here.</p>
+              </li>
+              <li id="eventful" className="scroll-mt-24">
+                <h3 className="font-medium text-foreground">Eventful</h3>
+                <p className="mt-1 text-muted-foreground">Describe event planning and promotion services here.</p>
               </li>
               <li id="seo" className="scroll-mt-24">
                 <h3 className="font-medium text-foreground">SEO</h3>
