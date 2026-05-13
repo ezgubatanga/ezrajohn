@@ -42,7 +42,7 @@ function App() {
 
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`${navLinkClass} inline-flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-ring max-sm:gap-0.5`}
+                className={`${navLinkClass} inline-flex items-center gap-1 border-0 bg-transparent shadow-none outline-none ring-0 ring-offset-0 [-webkit-tap-highlight-color:transparent] focus:border-0 focus:outline-none focus:ring-0 data-[state=open]:border-0 data-[state=open]:ring-0 max-sm:gap-0.5 max-sm:focus-visible:ring-0 sm:focus-visible:ring-2 sm:focus-visible:ring-ring`}
               >
                 Services
                 <ChevronDown
