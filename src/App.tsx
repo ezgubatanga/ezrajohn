@@ -33,17 +33,17 @@ function App() {
             >
               Ezra Digital Solutions
             </a>
-            <div className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold text-emerald-500 lg:hidden animate-pulse">
+            <div className="inline-flex items-center gap-1 rounded-full text-xs font-semibold text-emerald-500 lg:hidden animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
           </div>
 
           <nav
-            className="flex w-full min-w-0 flex-nowrap items-center justify-end gap-x-2 overflow-x-auto [scrollbar-width:none] sm:overflow-visible [&::-webkit-scrollbar]:hidden"
+            className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-2 overflow-x-auto [scrollbar-width:none] sm:justify-start sm:overflow-visible [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
-            <div className="hidden items-center gap-1 rounded-full px-2 py-1 text-sm font-semibold text-emerald-500 lg:inline-flex animate-pulse">
+            <div className="hidden items-center gap-1 rounded-full text-sm font-semibold text-emerald-500 lg:inline-flex animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
