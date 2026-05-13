@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+/** Unsplash — abstract React-related artwork (stable public URL) */
+const heroImg =
+  "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=340&h=358&q=80"
 import './App.css'
 
 function App() {

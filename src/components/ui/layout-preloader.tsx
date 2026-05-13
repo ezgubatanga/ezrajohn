@@ -1,8 +1,11 @@
+// UI components can be added here as needed
+
 import * as React from "react"
+import { Loader2 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-type LayoutPreloaderProps = {
+export type LayoutPreloaderProps = {
   /** Minimum time (ms) the overlay stays visible so content does not flash */
   minMs?: number
   className?: string
@@ -10,9 +13,8 @@ type LayoutPreloaderProps = {
 }
 
 /**
- * Full-viewport preloader drawn above children until fonts are ready (and optional minimum delay).
- * The 21st.dev registry entry only contained a placeholder TS file; this implements the overlay
- * and uses the `noise-animation` keyframes that the registry adds to your CSS.
+ * Full-viewport preloader over children until fonts are ready (and optional minimum delay).
+ * Uses global `noise-animation` keyframes from `src/index.css`.
  */
 export function LayoutPreloader({
   minMs = 600,
@@ -67,7 +69,11 @@ export function LayoutPreloader({
             }}
             aria-hidden
           />
-          <div className="relative size-10 rounded-full border-2 border-muted border-t-primary animate-spin" />
+          <Loader2
+            className="relative size-10 animate-spin text-primary"
+            strokeWidth={2}
+            aria-hidden
+          />
         </div>
       ) : null}
     </>
