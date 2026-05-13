@@ -32,7 +32,7 @@ function App() {
             >
               Ezra Digital Solutions
             </a>
-            <div className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold text-emerald-500 lg:hidden animate-pulse">
+            <div className="inline-flex items-center gap-1 rounded-full px-1.5 py-1 text-[11px] font-semibold text-emerald-500 lg:hidden animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
