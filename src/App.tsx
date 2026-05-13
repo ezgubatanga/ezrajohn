@@ -24,7 +24,7 @@ function App() {
           <TheInfiniteGrid />
         </div>
 
-        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:px-10">
+        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 md:flex-row md:items-center md:justify-between md:gap-4 md:px-10">
           <div className="flex w-full items-center justify-between gap-3">
             <a
               href="#top"

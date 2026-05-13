@@ -104,7 +104,7 @@ export function TheInfiniteGrid({ className }: { className?: string }) {
       <div className="pointer-events-none relative z-10 mx-auto flex max-w-3xl flex-col items-center space-y-6 px-4 text-center">
         <div className="space-y-2">
           <h2 className="text-4xl font-extrabold tracking-tight text-foreground drop-shadow-sm md:text-6xl">
-            The Infinite Grid
+            Digital Marketing & Web Specialist
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
             Move your cursor to reveal the active grid layer. <br />
