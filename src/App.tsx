@@ -102,7 +102,7 @@ function App() {
             aria-hidden
           />
 
-          <div className="flex flex-col gap-8 bg-background px-6 py-8 sm:px-10">
+          <div className="flex flex-col gap-8 bg-background px-6 py-8 text-base sm:px-10">
           <section
             aria-labelledby="about-me"
             className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"
@@ -140,37 +140,41 @@ function App() {
             aria-labelledby="services-overview"
             className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"
           >
-            <h2 id="services-overview" className="text-lg font-semibold tracking-tight">
+            <h2 id="services-overview" className="text-2xl font-semibold tracking-tight sm:text-3xl">
               Services
             </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <p className="mt-2 text-base text-muted-foreground">
               Placeholder sections for main-menu links. Replace with your real service pages or
               routes when ready.
             </p>
-            <ul className="mt-6 space-y-6 text-sm">
+            <ul className="mt-6 space-y-6 text-base">
               <li id="web-development" className="scroll-mt-24">
-                <h3 className="font-medium text-foreground">Web Development</h3>
-                <p className="mt-1 text-muted-foreground">Describe your web builds here.</p>
+                <h3 className="text-base font-medium text-foreground sm:text-xl">Web Development</h3>
+                <p className="mt-1 text-base text-muted-foreground">Describe your web builds here.</p>
               </li>
               <li id="social-media-marketing" className="scroll-mt-24">
-                <h3 className="font-medium text-foreground">Social Media Marketing</h3>
-                <p className="mt-1 text-muted-foreground">Describe SMM offerings here.</p>
+                <h3 className="text-base font-medium text-foreground sm:text-xl">Social Media Marketing</h3>
+                <p className="mt-1 text-base text-muted-foreground">Describe SMM offerings here.</p>
               </li>
               <li id="graphic-design" className="scroll-mt-24">
-                <h3 className="font-medium text-foreground">Graphic Design</h3>
-                <p className="mt-1 text-muted-foreground">Describe design work here.</p>
+                <h3 className="text-base font-medium text-foreground sm:text-xl">Graphic Design</h3>
+                <p className="mt-1 text-base text-muted-foreground">Describe design work here.</p>
+              </li>
+              <li id="e-commerce" className="scroll-mt-24">
+                <h3 className="text-base font-medium text-foreground sm:text-xl">E-Commerce</h3>
+                <p className="mt-1 text-base text-muted-foreground">Describe Shopify, online store, and sales optimization services here.</p>
               </li>
               <li id="paid-ads" className="scroll-mt-24">
-                <h3 className="font-medium text-foreground">Paid Ads</h3>
-                <p className="mt-1 text-muted-foreground">Describe paid media here.</p>
+                <h3 className="text-base font-medium text-foreground sm:text-xl">Paid Ads</h3>
+                <p className="mt-1 text-base text-muted-foreground">Describe paid media here.</p>
               </li>
               <li id="eventful" className="scroll-mt-24">
-                <h3 className="font-medium text-foreground">Eventful</h3>
-                <p className="mt-1 text-muted-foreground">Describe event planning and promotion services here.</p>
+                <h3 className="text-base font-medium text-foreground sm:text-xl">Eventful</h3>
+                <p className="mt-1 text-base text-muted-foreground">Describe event planning and promotion services here.</p>
               </li>
               <li id="seo" className="scroll-mt-24">
-                <h3 className="font-medium text-foreground">SEO</h3>
-                <p className="mt-1 text-muted-foreground">Describe search optimization services here.</p>
+                <h3 className="text-base font-medium text-foreground sm:text-xl">SEO</h3>
+                <p className="mt-1 text-base text-muted-foreground">Describe search optimization services here.</p>
               </li>
             </ul>
           </section>
@@ -190,7 +194,7 @@ function App() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <article className="rounded-3xl border border-border bg-background p-6 shadow-sm shadow-muted/20">
-                <h3 className="text-lg font-semibold text-foreground">Eventful</h3>
+                <h3 className="text-lg font-semibold text-foreground sm:text-xl">Eventful</h3>
                 <p className="mt-3 text-sm text-muted-foreground">Landing pages for modern events.</p>
                 <p className="mt-6 text-sm font-medium text-foreground">React • Vite</p>
                 <a
@@ -204,7 +208,7 @@ function App() {
               </article>
 
               <article className="rounded-3xl border border-border bg-background p-6 shadow-sm shadow-muted/20">
-                <h3 className="text-lg font-semibold text-foreground">RRAC Campaigns</h3>
+                <h3 className="text-lg font-semibold text-foreground sm:text-xl">RRAC Campaigns</h3>
                 <p className="mt-3 text-sm text-muted-foreground">Ads + branding + social campaigns.</p>
                 <p className="mt-6 text-sm font-medium text-foreground">Meta Ads • SMM</p>
                 <a
@@ -216,7 +220,7 @@ function App() {
               </article>
 
               <article className="rounded-3xl border border-border bg-background p-6 shadow-sm shadow-muted/20">
-                <h3 className="text-lg font-semibold text-foreground">Funnel Systems</h3>
+                <h3 className="text-lg font-semibold text-foreground sm:text-xl">Funnel Systems</h3>
                 <p className="mt-3 text-sm text-muted-foreground">Automation & lead conversion systems.</p>
                 <p className="mt-6 text-sm font-medium text-foreground">Workflow • Conversion</p>
                 <a
@@ -228,7 +232,7 @@ function App() {
               </article>
 
               <article className="rounded-3xl border border-border bg-background p-6 shadow-sm shadow-muted/20">
-                <h3 className="text-lg font-semibold text-foreground">E-commerce Work</h3>
+                <h3 className="text-lg font-semibold text-foreground sm:text-xl">E-commerce Work</h3>
                 <p className="mt-3 text-sm text-muted-foreground">Shopify + ads + sales optimization.</p>
                 <p className="mt-6 text-sm font-medium text-foreground">Shopify • Ads</p>
                 <a
@@ -245,8 +249,8 @@ function App() {
             id="case-studies"
             className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border bg-muted/30 px-6 py-10 text-left"
           >
-            <h2 className="text-lg font-semibold tracking-tight">Case Studies</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Case Studies</h2>
+            <p className="mt-2 text-base text-muted-foreground">
               Add project highlights here. This section is linked from the main menu.
             </p>
           </section>
