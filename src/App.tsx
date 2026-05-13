@@ -120,11 +120,11 @@ function App() {
                   <p className="text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground">
                     About Me
                   </p>
-                  <p className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-                    I&#8217;m Ezra John Gubatanga, a digital marketing and web specialist focused on building modern, conversion-focused digital experiences.
-                  </p>
                 </div>
                 <div className="space-y-3 text-sm leading-7 text-muted-foreground">
+                  <p>
+                    I&#8217;m <b>Ezra John Gubatanga</b>, a digital marketing and web specialist focused on building modern, conversion-focused digital experiences.
+                  </p>
                   <p>
                     I combine web development, Meta Ads, automation, and branding to help businesses grow online.
                   </p>
