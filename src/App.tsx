@@ -32,7 +32,7 @@ function App() {
             >
               Ezra Digital Solutions
             </a>
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500 px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:hidden">
+            <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:hidden animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
@@ -42,7 +42,7 @@ function App() {
             className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-0 overflow-x-auto [scrollbar-width:none] sm:w-auto sm:justify-end sm:gap-x-2 sm:overflow-visible [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
-            <div className="hidden items-center gap-2 rounded-full border border-emerald-500 px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:inline-flex">
+            <div className="hidden items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:inline-flex animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
@@ -60,7 +60,7 @@ function App() {
                   aria-hidden
                 />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-48">
+              <DropdownMenuContent align="end" className="min-w-48 space-y-2">
                 <DropdownMenuItem asChild>
                   <a href="#web-development">Web Development</a>
                 </DropdownMenuItem>
@@ -75,6 +75,9 @@ function App() {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a href="#paid-ads">Paid Ads</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="#seo">SEO</a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -124,25 +127,11 @@ function App() {
                 <h3 className="font-medium text-foreground">Paid Ads</h3>
                 <p className="mt-1 text-muted-foreground">Describe paid media here.</p>
               </li>
+              <li id="seo" className="scroll-mt-24">
+                <h3 className="font-medium text-foreground">SEO</h3>
+                <p className="mt-1 text-muted-foreground">Describe search optimization services here.</p>
+              </li>
             </ul>
-          </section>
-
-          <section className="mx-auto flex max-w-2xl flex-col text-left">
-            <p className="text-sm font-medium text-muted-foreground">Home</p>
-            <h1 className="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-              Build your next page here
-            </h1>
-            <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
-              This replaces the default Vite starter. Edit copy, links, and the hero image
-              in <code className="rounded-md bg-muted px-1.5 py-0.5 text-sm">src/App.tsx</code>
-              to match your product or portfolio.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button type="button">Primary action</Button>
-              <Button type="button" variant="outline">
-                Secondary
-              </Button>
-            </div>
           </section>
 
           <section
