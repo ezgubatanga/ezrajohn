@@ -13,7 +13,7 @@ import {
 const CONTACT_EMAIL = 'ezgubatanga@gmail.com'
 
 const navLinkClass =
-  'rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground'
+  'shrink-0 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground max-sm:px-2 max-sm:py-1.5 max-sm:text-xs'
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
           </a>
 
           <nav
-            className="flex w-full flex-wrap items-center justify-between gap-x-2 gap-y-2 sm:w-auto sm:justify-end sm:gap-x-2"
+            className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-1 overflow-x-auto [scrollbar-width:none] sm:w-auto sm:justify-end sm:gap-x-2 sm:overflow-visible [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
             <a href="#top" className={navLinkClass}>
@@ -42,10 +42,13 @@ function App() {
 
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`${navLinkClass} inline-flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-ring`}
+                className={`${navLinkClass} inline-flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-ring max-sm:gap-0.5`}
               >
                 Services
-                <ChevronDown className="size-4 opacity-60" aria-hidden />
+                <ChevronDown
+                  className="size-4 shrink-0 opacity-60 max-sm:size-3.5"
+                  aria-hidden
+                />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="min-w-48">
                 <DropdownMenuItem asChild>
@@ -64,7 +67,8 @@ function App() {
             </DropdownMenu>
 
             <a href="#case-studies" className={navLinkClass}>
-              Case Studies
+              <span className="sm:hidden">Cases</span>
+              <span className="hidden sm:inline">Case Studies</span>
             </a>
             <a href={`mailto:${CONTACT_EMAIL}`} className={navLinkClass}>
               Contact
