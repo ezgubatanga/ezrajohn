@@ -43,7 +43,7 @@ function App() {
             className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-2 overflow-x-auto [scrollbar-width:none] sm:justify-start sm:overflow-visible md:w-auto [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
-            <div className="hidden items-center gap-1 rounded-full text-sm font-semibold text-emerald-500 lg:inline-flex animate-pulse">
+            <div className="hidden items-center gap-1 rounded-full text-sm font-semibold text-emerald-500 lg:inline-flex lg:mr-4 animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
