@@ -108,7 +108,9 @@ export function TheInfiniteGrid({ className }: { className?: string }) {
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
             I build conversion-focused websites, funnels,
-and digital growth systems.
+and digital growth systems. <br/>
+Combining web development, Meta Ads, automation,
+and modern design to help businesses grow online.
           </p>
         </div>
 
