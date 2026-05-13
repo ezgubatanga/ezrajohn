@@ -1,5 +1,6 @@
 import { ChevronDown } from 'lucide-react'
 
+import profilePhoto from '@/assets/me.webp'
 import { LayoutPreloader } from '@/components/ui/layout-preloader'
 import { Button } from '@/components/ui/button'
 import { TheInfiniteGrid } from '@/components/ui/the-infinite-grid'
@@ -103,6 +104,39 @@ function App() {
 
           <div className="flex flex-col gap-8 bg-background px-6 py-8 sm:px-10">
           <section
+            aria-labelledby="about-me"
+            className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"
+          >
+            <div className="grid grid-cols-[minmax(120px,180px)_1fr] gap-6">
+              <div className="rounded-3xl overflow-hidden bg-muted">
+                <img
+                  src={profilePhoto}
+                  alt="Ezra John Gubatanga"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col justify-center gap-4">
+                <div className="space-y-2">
+                  <p className="text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground">
+                    About Me
+                  </p>
+                  <p className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                    I&#8217;m Ezra John Gubatanga, a digital marketing and web specialist focused on building modern, conversion-focused digital experiences.
+                  </p>
+                </div>
+                <div className="space-y-3 text-sm leading-7 text-muted-foreground">
+                  <p>
+                    I combine web development, Meta Ads, automation, and branding to help businesses grow online.
+                  </p>
+                  <p>
+                    Based in the Philippines.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
             aria-labelledby="services-overview"
             className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"
           >
@@ -139,6 +173,72 @@ function App() {
                 <p className="mt-1 text-muted-foreground">Describe search optimization services here.</p>
               </li>
             </ul>
+          </section>
+
+          <section
+            aria-labelledby="featured-projects"
+            className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"
+          >
+            <div className="space-y-4">
+              <p className="text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground">
+                Featured Projects
+              </p>
+              <h2 id="featured-projects" className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                Selected work across web development, digital marketing, and automation.
+              </h2>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <article className="rounded-3xl border border-border bg-background p-6 shadow-sm shadow-muted/20">
+                <h3 className="text-lg font-semibold text-foreground">Eventful</h3>
+                <p className="mt-3 text-sm text-muted-foreground">Landing pages for modern events.</p>
+                <p className="mt-6 text-sm font-medium text-foreground">React • Vite</p>
+                <a
+                  href="https://eventful.page"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600"
+                >
+                  View Project
+                </a>
+              </article>
+
+              <article className="rounded-3xl border border-border bg-background p-6 shadow-sm shadow-muted/20">
+                <h3 className="text-lg font-semibold text-foreground">RRAC Campaigns</h3>
+                <p className="mt-3 text-sm text-muted-foreground">Ads + branding + social campaigns.</p>
+                <p className="mt-6 text-sm font-medium text-foreground">Meta Ads • SMM</p>
+                <a
+                  href="#case-studies"
+                  className="mt-6 inline-flex rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600"
+                >
+                  View Project
+                </a>
+              </article>
+
+              <article className="rounded-3xl border border-border bg-background p-6 shadow-sm shadow-muted/20">
+                <h3 className="text-lg font-semibold text-foreground">Funnel Systems</h3>
+                <p className="mt-3 text-sm text-muted-foreground">Automation & lead conversion systems.</p>
+                <p className="mt-6 text-sm font-medium text-foreground">Workflow • Conversion</p>
+                <a
+                  href="#case-studies"
+                  className="mt-6 inline-flex rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600"
+                >
+                  View Project
+                </a>
+              </article>
+
+              <article className="rounded-3xl border border-border bg-background p-6 shadow-sm shadow-muted/20">
+                <h3 className="text-lg font-semibold text-foreground">E-commerce Work</h3>
+                <p className="mt-3 text-sm text-muted-foreground">Shopify + ads + sales optimization.</p>
+                <p className="mt-6 text-sm font-medium text-foreground">Shopify • Ads</p>
+                <a
+                  href="#case-studies"
+                  className="mt-6 inline-flex rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600"
+                >
+                  View Project
+                </a>
+              </article>
+            </div>
           </section>
 
           <section
