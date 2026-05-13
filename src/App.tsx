@@ -1,127 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import { LayoutPreloader } from '@/components/ui/layout-preloader'
-import './App.css'
+import { Button } from '@/components/ui/button'
 
-/** Unsplash — abstract React-related artwork (stable public URL) */
-const heroImg =
-  'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=340&h=358&q=80'
+/** Hero image — landscape, fixed aspect; Unsplash serves width/quality only */
+const HERO_IMAGE =
+  'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&h=720&q=80'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <LayoutPreloader>
-      <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Welcome</h1>
-          <p>
-            You are running the Vite + React starter. Change this section in{' '}
-            <code>src/App.tsx</code> whenever you are ready to build your homepage.
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <div className="flex min-h-svh flex-col bg-background text-foreground">
+        <header className="border-b border-border px-6 py-4">
+          <span className="text-sm font-semibold tracking-tight">Ezrajohn</span>
+        </header>
 
-      <div className="ticks"></div>
+        <main className="flex flex-1 flex-col">
+          <div className="w-full px-6 pt-8 pb-0 sm:px-10">
+            <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-border shadow-sm">
+              <img
+                src={HERO_IMAGE}
+                alt=""
+                width={1600}
+                height={720}
+                className="aspect-[20/9] w-full object-cover sm:aspect-[21/9]"
+                decoding="async"
+                fetchPriority="high"
+              />
+            </div>
+          </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <section className="mx-auto flex max-w-2xl flex-1 flex-col justify-center px-6 py-14 text-left sm:px-10">
+            <p className="text-sm font-medium text-muted-foreground">Home</p>
+            <h1 className="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              Build your next page here
+            </h1>
+            <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
+              This replaces the default Vite starter. Edit copy, links, and the hero image
+              in <code className="rounded-md bg-muted px-1.5 py-0.5 text-sm">src/App.tsx</code>
+              to match your product or portfolio.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button type="button">Primary action</Button>
+              <Button type="button" variant="outline">
+                Secondary
+              </Button>
+            </div>
+          </section>
+        </main>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        <footer className="border-t border-border px-6 py-6 text-left text-sm text-muted-foreground sm:px-10">
+          © {new Date().getFullYear()} Ezrajohn
+        </footer>
+      </div>
     </LayoutPreloader>
   )
 }
