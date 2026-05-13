@@ -25,24 +25,28 @@ function App() {
           <TheInfiniteGrid />
         </div>
 
-        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 md:flex-row md:items-center md:justify-between md:gap-4 md:px-10">
-          <div className="flex w-full items-center justify-between gap-3 md:w-auto">
+        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 md:px-10">
+          <div className="flex w-full items-center justify-between gap-3">
             <a
               href="#top"
               className="text-sm font-semibold tracking-tight text-foreground"
             >
               Ezra Digital Solutions
             </a>
-            <div className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-sm max-sm:text-xs font-semibold text-emerald-500 animate-pulse">
+            <div className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold text-emerald-500 lg:hidden animate-pulse">
               <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
           </div>
 
           <nav
-            className="flex flex-1 min-w-0 flex-nowrap items-center justify-end gap-x-0 overflow-x-auto [scrollbar-width:none] sm:gap-x-2 sm:overflow-visible [&::-webkit-scrollbar]:hidden"
+            className="flex w-full min-w-0 flex-nowrap items-center justify-end gap-x-2 overflow-x-auto [scrollbar-width:none] sm:overflow-visible [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
+            <div className="hidden items-center gap-1 rounded-full px-2 py-1 text-sm font-semibold text-emerald-500 lg:inline-flex animate-pulse">
+              <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+              Available
+            </div>
             <a href="#top" className={navLinkClass}>
               Home
             </a>
