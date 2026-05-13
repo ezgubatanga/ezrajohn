@@ -24,13 +24,16 @@ function App() {
           <TheInfiniteGrid />
         </div>
 
-        <header className="relative z-20 flex flex-wrap items-center justify-between gap-4 border-0 bg-transparent px-6 py-4 sm:px-10">
-          <a href="#top" className="text-sm font-semibold tracking-tight text-foreground">
+        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 sm:px-10">
+          <a
+            href="#top"
+            className="self-start text-sm font-semibold tracking-tight text-foreground sm:mr-auto"
+          >
             Ezra Digital Solutions
           </a>
 
           <nav
-            className="flex flex-wrap items-center justify-end gap-1 sm:gap-2"
+            className="flex w-full flex-wrap items-center justify-between gap-x-2 gap-y-2 sm:w-auto sm:justify-end sm:gap-x-2"
             aria-label="Main"
           >
             <a href="#top" className={navLinkClass}>
