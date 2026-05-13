@@ -18,8 +18,13 @@ const navLinkClass =
 function App() {
   return (
     <LayoutPreloader>
-      <div id="top" className="flex min-h-svh flex-col bg-background text-foreground">
-        <header className="flex flex-wrap items-center justify-between gap-4 border-b border-border px-6 py-4 sm:px-10">
+      <div id="top" className="relative flex min-h-svh flex-col text-foreground">
+        {/* Full-width grid: hero + header backdrop */}
+        <div className="absolute inset-x-0 top-0 z-0 h-[min(92vh,56rem)] min-h-[480px] w-full overflow-hidden">
+          <TheInfiniteGrid />
+        </div>
+
+        <header className="relative z-20 flex flex-wrap items-center justify-between gap-4 border-0 bg-transparent px-6 py-4 sm:px-10">
           <a href="#top" className="text-sm font-semibold tracking-tight text-foreground">
             Ezra Digital Solutions
           </a>
@@ -64,11 +69,14 @@ function App() {
           </nav>
         </header>
 
-        <main className="flex flex-1 flex-col gap-8 px-6 py-8 sm:px-10">
-          <div className="relative h-[min(72vh,820px)] min-h-[420px] w-full overflow-hidden rounded-2xl border border-border shadow-sm">
-            <TheInfiniteGrid />
-          </div>
+        <main className="relative z-10 flex flex-1 flex-col">
+          {/* Reserve hero height so the grid shows through above the fold */}
+          <div
+            className="pointer-events-none shrink-0 min-h-[calc(min(92vh,56rem)-5.5rem)] w-full"
+            aria-hidden
+          />
 
+          <div className="flex flex-col gap-8 bg-background px-6 py-8 sm:px-10">
           <section
             aria-labelledby="services-overview"
             className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"
@@ -127,9 +135,10 @@ function App() {
               Add project highlights here. This section is linked from the main menu.
             </p>
           </section>
+          </div>
         </main>
 
-        <footer className="border-t border-border px-6 py-6 text-left text-sm text-muted-foreground sm:px-10">
+        <footer className="relative z-10 border-t border-border bg-background px-6 py-6 text-left text-sm text-muted-foreground sm:px-10">
           © {new Date().getFullYear()} Ezra Digital Solutions
         </footer>
       </div>
