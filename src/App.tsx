@@ -61,6 +61,9 @@ function App() {
                   <a href="#graphic-design">Graphic Design</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
+                  <a href="#paid-ads">E-Commerce</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <a href="#paid-ads">Paid Ads</a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
