@@ -13,7 +13,7 @@ import {
 const CONTACT_EMAIL = 'ezgubatanga@gmail.com'
 
 const navLinkClass =
-  'shrink-0 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground max-sm:px-2 max-sm:py-1.5 max-sm:text-xs'
+  'shrink-0 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground max-sm:px-0 max-sm:py-1.5 max-sm:text-xs'
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
           </a>
 
           <nav
-            className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-1 overflow-x-auto [scrollbar-width:none] sm:w-auto sm:justify-end sm:gap-x-2 sm:overflow-visible [&::-webkit-scrollbar]:hidden"
+            className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-0 overflow-x-auto [scrollbar-width:none] sm:w-auto sm:justify-end sm:gap-x-2 sm:overflow-visible [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
             <a href="#top" className={navLinkClass}>
@@ -67,8 +67,7 @@ function App() {
             </DropdownMenu>
 
             <a href="#case-studies" className={navLinkClass}>
-              <span className="sm:hidden">Cases</span>
-              <span className="hidden sm:inline">Case Studies</span>
+              Case Studies
             </a>
             <a href={`mailto:${CONTACT_EMAIL}`} className={navLinkClass}>
               Contact
