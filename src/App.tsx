@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 
 import profilePhoto from '@/assets/me.webp'
@@ -17,6 +18,14 @@ const navLinkClass =
   'shrink-0 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground max-sm:px-0 max-sm:py-1.5 max-sm:text-xs'
 
 function App() {
+  const [contactData, setContactData] = useState({
+    fullName: '',
+    email: '',
+    countryCode: '+63',
+    phone: '',
+    message: '',
+  })
+
   return (
     <LayoutPreloader>
       <div id="top" className="relative flex min-h-svh flex-col text-foreground">
@@ -177,6 +186,127 @@ function App() {
                 <p className="mt-1 text-base text-muted-foreground">Describe search optimization services here.</p>
               </li>
             </ul>
+          </section>
+
+          <section
+            id="contact"
+            aria-labelledby="contact-heading"
+            className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"
+          >
+            <div className="space-y-4">
+              <p className="text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground">
+                Contact Me
+              </p>
+              <h2 id="contact-heading" className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                Send a message and I’ll get back to you shortly.
+              </h2>
+            </div>
+
+            <form
+              className="mt-8 grid gap-4"
+              onSubmit={(event) => {
+                event.preventDefault()
+                console.log('Contact form data:', contactData)
+              }}
+            >
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="space-y-2 text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">Full name</span>
+                  <input
+                    type="text"
+                    name="full_name"
+                    required
+                    value={contactData.fullName}
+                    onChange={(event) =>
+                      setContactData((current) => ({
+                        ...current,
+                        fullName: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  />
+                </label>
+                <label className="space-y-2 text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    value={contactData.email}
+                    onChange={(event) =>
+                      setContactData((current) => ({
+                        ...current,
+                        email: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  />
+                </label>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-[150px_minmax(0,_1fr)]">
+                <label className="space-y-2 text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">Country</span>
+                  <select
+                    name="country_code"
+                    value={contactData.countryCode}
+                    onChange={(event) =>
+                      setContactData((current) => ({
+                        ...current,
+                        countryCode: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  >
+                    <option value="+63">🇵🇭 +63</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+61">🇦🇺 +61</option>
+                    <option value="+91">🇮🇳 +91</option>
+                  </select>
+                </label>
+
+                <label className="space-y-2 text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">Contact number (optional)</span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={contactData.phone}
+                    onChange={(event) =>
+                      setContactData((current) => ({
+                        ...current,
+                        phone: event.target.value,
+                      }))
+                    }
+                    placeholder="923 456 7890"
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  />
+                </label>
+              </div>
+
+              <label className="space-y-2 text-sm text-muted-foreground">
+                <span className="font-medium text-foreground">Message</span>
+                <textarea
+                  name="message"
+                  required
+                  rows={6}
+                  value={contactData.message}
+                  onChange={(event) =>
+                    setContactData((current) => ({
+                      ...current,
+                      message: event.target.value,
+                    }))
+                  }
+                  className="min-h-[160px] w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                />
+              </label>
+
+              <div className="mt-4">
+                <Button type="submit" className="w-full sm:w-auto">
+                  Send message
+                </Button>
+              </div>
+            </form>
           </section>
 
           <section
