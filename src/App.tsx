@@ -24,7 +24,7 @@ function App() {
           <TheInfiniteGrid />
         </div>
 
-        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 sm:px-10">
+        <header className="relative z-20 flex w-full flex-col gap-3 border-0 bg-transparent px-6 py-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:px-10">
           <div className="flex w-full items-center justify-between gap-3">
             <a
               href="#top"
@@ -32,16 +32,8 @@ function App() {
             >
               Ezra Digital Solutions
             </a>
-            <div className="hidden items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:flex">
-              <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 shadow-[0_0_0_8px_rgba(16,185,129,0.15)] animate-pulse" aria-hidden="true" />
-              Available
-            </div>
-          </div>
-
-          <div className="flex w-full items-center justify-between gap-3 lg:hidden">
-            <div className="flex-1" />
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-500">
-              <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 shadow-[0_0_0_8px_rgba(16,185,129,0.15)] animate-pulse" aria-hidden="true" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500 px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:hidden">
+              <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
           </div>
@@ -50,8 +42,8 @@ function App() {
             className="flex w-full min-w-0 flex-nowrap items-center justify-between gap-x-0 overflow-x-auto [scrollbar-width:none] sm:w-auto sm:justify-end sm:gap-x-2 sm:overflow-visible [&::-webkit-scrollbar]:hidden"
             aria-label="Main"
           >
-            <div className="hidden items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:inline-flex">
-              <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 shadow-[0_0_0_8px_rgba(16,185,129,0.15)] animate-pulse" aria-hidden="true" />
+            <div className="hidden items-center gap-2 rounded-full border border-emerald-500 px-3 py-1.5 text-xs font-semibold text-emerald-500 lg:inline-flex">
+              <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               Available
             </div>
             <a href="#top" className={navLinkClass}>
