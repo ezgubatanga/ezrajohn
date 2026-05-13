@@ -105,7 +105,7 @@ function App() {
           <div className="flex flex-col gap-8 bg-background px-6 py-8 text-base md:px-10">
           <section
             aria-labelledby="about-me"
-            className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"
+            className="mx-auto w-full scroll-mt-24 rounded-xl px-6 py-8 text-left"
           >
             <div className="grid grid-cols-[minmax(120px,180px)_1fr] gap-6">
               <div className="rounded-3xl overflow-hidden bg-muted">
