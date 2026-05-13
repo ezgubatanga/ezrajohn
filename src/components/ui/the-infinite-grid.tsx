@@ -107,8 +107,8 @@ export function TheInfiniteGrid({ className }: { className?: string }) {
             Digital Marketing & Web Specialist
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
-            Move your cursor to reveal the active grid layer. <br />
-            The pattern scrolls infinitely in the background.
+            I build conversion-focused websites, funnels,
+and digital growth systems.
           </p>
         </div>
 
@@ -118,13 +118,13 @@ export function TheInfiniteGrid({ className }: { className?: string }) {
             onClick={() => setCount((c) => c + 1)}
             className="rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 active:scale-95"
           >
-            Interact ({count})
+            Projects ({count})
           </button>
           <button
             type="button"
             className="rounded-md bg-secondary px-8 py-3 font-semibold text-secondary-foreground transition-all hover:bg-secondary/80 active:scale-95"
           >
-            Learn More
+            Contact
           </button>
         </div>
       </div>
