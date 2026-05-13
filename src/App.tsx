@@ -102,7 +102,7 @@ function App() {
             aria-hidden
           />
 
-          <div className="flex flex-col gap-8 bg-background px-6 py-8 text-base sm:px-10">
+          <div className="flex flex-col gap-8 bg-background px-6 py-8 text-base md:px-10">
           <section
             aria-labelledby="about-me"
             className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl border border-border px-6 py-8 text-left"

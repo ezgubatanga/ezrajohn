@@ -101,14 +101,13 @@ export function TheInfiniteGrid({ className }: { className?: string }) {
         <div className="absolute bottom-[-20%] left-[-10%] h-[40%] w-[40%] rounded-full bg-blue-500/40 blur-[120px] dark:bg-blue-600/20" />
       </div>
 
-      <div className="pointer-events-none relative z-10 mx-auto flex max-w-3xl flex-col items-center space-y-6 px-4 text-center">
+      <div className="pointer-events-none relative z-10 mx-auto flex max-w-3xl flex-col items-center space-y-6 px-6 text-center md:px-10">
         <div className="space-y-3">
-          <h2 className="text-5xl font-extrabold tracking-tight text-foreground drop-shadow-sm sm:text-6xl md:text-7xl">
+          <h2 className="text-[3.75rem] font-extrabold tracking-tight text-foreground drop-shadow-sm sm:text-[4.75rem] md:text-[5.75rem]">
             Digital Marketing & Web Specialist
           </h2>
-          <p className="max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg md:text-xl md:leading-9">
-            I build conversion-focused websites, funnels, and digital growth systems.
-            Combining web development, Meta Ads, automation, and modern design to help businesses grow online.
+          <p className="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg md:text-xl md:leading-8">
+            I build conversion-focused websites, funnels, and digital growth systems. Combining web development, Meta Ads, automation, and modern design to help businesses grow online.
           </p>
         </div>
 
