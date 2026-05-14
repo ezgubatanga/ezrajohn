@@ -228,42 +228,26 @@ function App() {
                   }
                 }}
               >
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="space-y-2 text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">Full name</span>
-                    <input
-                      type="text"
-                      name="full_name"
-                      required
-                      value={contactData.fullName}
-                      onChange={(event) =>
-                        setContactData((current) => ({
-                          ...current,
-                          fullName: event.target.value,
-                        }))
-                      }
-                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                    />
-                  </label>
-                  <label className="space-y-2 text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">Email</span>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={contactData.email}
-                      onChange={(event) =>
-                        setContactData((current) => ({
-                          ...current,
-                          email: event.target.value,
-                        }))
-                      }
-                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                    />
-                  </label>
-                </div>
+                {/* Full name — full width */}
+                <label className="space-y-2 text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">Full name</span>
+                  <input
+                    type="text"
+                    name="full_name"
+                    required
+                    value={contactData.fullName}
+                    onChange={(event) =>
+                      setContactData((current) => ({
+                        ...current,
+                        fullName: event.target.value,
+                      }))
+                    }
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  />
+                </label>
 
-                <div className="grid gap-4 sm:grid-cols-[150px_minmax(0,_1fr)]">
+                {/* Country + Contact number + Email — one row on desktop */}
+                <div className="grid gap-4 sm:grid-cols-[120px_1fr_1fr]">
                   <label className="space-y-2 text-sm text-muted-foreground">
                     <span className="font-medium text-foreground">Country</span>
                     <select
@@ -275,7 +259,7 @@ function App() {
                           countryCode: event.target.value,
                         }))
                       }
-                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3 pr-8 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                     >
                       <option value="+63">🇵🇭 +63</option>
                       <option value="+1">🇺🇸 +1</option>
@@ -301,6 +285,23 @@ function App() {
                       className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                     />
                   </label>
+
+                  <label className="space-y-2 text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Email</span>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={contactData.email}
+                      onChange={(event) =>
+                        setContactData((current) => ({
+                          ...current,
+                          email: event.target.value,
+                        }))
+                      }
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    />
+                  </label>
                 </div>
 
                 <label className="space-y-2 text-sm text-muted-foreground">
@@ -321,7 +322,7 @@ function App() {
                 </label>
 
                 <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <Button type="submit" disabled={formStatus === 'loading'} className="w-full sm:w-auto">
+                  <Button type="submit" disabled={formStatus === 'loading'} className="w-full px-8 py-8 text-base font-semibold sm:w-auto">
                     {formStatus === 'loading' ? 'Sending…' : 'Send message'}
                   </Button>
                   {formStatus === 'success' && (
