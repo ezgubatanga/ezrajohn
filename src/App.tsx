@@ -230,7 +230,6 @@ function App() {
               >
                 {/* Full name — full width */}
                 <label className="space-y-2 text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">Full name</span>
                   <input
                     type="text"
                     name="full_name"
@@ -242,6 +241,7 @@ function App() {
                         fullName: event.target.value,
                       }))
                     }
+                    placeholder="Full name"
                     className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                   />
                 </label>
