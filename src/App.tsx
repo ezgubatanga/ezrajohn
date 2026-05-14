@@ -160,9 +160,9 @@ function App() {
 
             <section
               aria-labelledby="about-me"
-              className="mx-auto w-full scroll-mt-24 rounded-xl py-8 text-left"
+              className="mx-auto w-full max-w-2xl scroll-mt-24 rounded-xl py-8 text-left"
             >
-              <div className="grid grid-cols-[minmax(80px,1fr)_2fr] gap-6 sm:grid-cols-[minmax(120px,180px)_1fr]">
+              <div className="grid grid-cols-[minmax(80px,1fr)_2fr] gap-6 sm:grid-cols-[1fr_2fr]">
                 <div className="rounded-3xl overflow-hidden bg-muted">
                   <img
                     src={profilePhoto}
