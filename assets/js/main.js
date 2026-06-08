@@ -4,8 +4,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // Load Header and Footer components
-  loadComponent("header-placeholder", "components/header.html", initHeader);
-  loadComponent("footer-placeholder", "components/footer.html", initFooter);
+  loadComponent("header-placeholder", "/components/header.html", initHeader);
+  loadComponent("footer-placeholder", "/components/footer.html", initFooter);
   
   // Initialize general behaviors
   initScrollReveal();
@@ -56,12 +56,13 @@ function initHeader() {
 
   // Highlight active page link based on URL
   const currentPath = window.location.pathname;
-  let pageName = currentPath.substring(currentPath.lastIndexOf("/") + 1);
-  if (pageName === "") pageName = "index.html"; // Default page
 
   links.forEach(link => {
     const href = link.getAttribute("href");
-    if (href === pageName || (pageName === "index.html" && href === "/")) {
+    const isHomeActive = (currentPath === "/" || currentPath === "/index.html") && href === "/";
+    const isSubActive = href !== "/" && (currentPath === href || currentPath.startsWith(href));
+    
+    if (isHomeActive || isSubActive) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");
