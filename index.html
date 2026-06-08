@@ -76,23 +76,50 @@
   <main>
     <!-- HERO SECTION -->
     <section class="hero-section">
-      <div class="container hero-grid">
+      <!-- Ambient Aurora Background -->
+      <div class="aurora-bg">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+      </div>
+
+      <div class="container hero-grid relative">
         <div class="hero-content reveal">
           <h1>Built Brands.<br>Scaled Campaigns.<br><span class="text-gradient">Developed Websites.</span></h1>
-          <p>
+          <p class="hero-subtitle">
             Digital Marketing Specialist & Web Developer with 8+ years of experience helping businesses grow through
             social media marketing, paid advertising, content strategy, and conversion-focused websites.
           </p>
           <div class="hero-actions">
-            <a href="/portfolio/" class="btn btn-primary">View My Work</a>
-            <a href="/assets/EzraJohn_Gubatanga-Resume.pdf" download class="btn btn-secondary">Download Resume</a>
+            <a href="/portfolio/" class="btn btn-primary btn-shimmer">
+              <span class="btn-text">View My Work</span>
+              <div class="shimmer-effect"></div>
+            </a>
+            <a href="/assets/EzraJohn_Gubatanga-Resume.pdf" download class="btn btn-secondary btn-glass">
+              Download Resume
+            </a>
           </div>
         </div>
         <div class="hero-image-container reveal reveal-delay-2">
-          <div class="hero-glow-ring"></div>
-          <div class="hero-image-wrapper">
+          <div class="hero-image-wrapper premium-frame">
             <img src="/assets/images/ezra-john.webp"
               alt="Ezra John Gubatanga - Digital Marketing Specialist & Web Developer" loading="eager">
+          </div>
+          
+          <!-- Floating UI Cards -->
+          <div class="floating-card card-top-left float-anim-1">
+            <div class="card-icon">🎯</div>
+            <div class="card-text">
+              <strong>14+</strong>
+              <span>Brands Managed</span>
+            </div>
+          </div>
+          <div class="floating-card card-bottom-right float-anim-2">
+            <div class="card-icon">⭐</div>
+            <div class="card-text">
+              <strong>100%</strong>
+              <span>Clean Code</span>
+            </div>
           </div>
         </div>
       </div>
