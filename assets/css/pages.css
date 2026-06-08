@@ -11,7 +11,7 @@
   padding-bottom: 0;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 50%, rgba(10, 15, 37, 0.4), var(--bg-primary));
+  background: radial-gradient(circle at 50% 50%, rgba(24, 30, 116, 0.05), var(--bg-primary));
 }
 
 /* Ambient Aurora Background */
@@ -32,7 +32,7 @@
   opacity: 0.5;
   border-radius: 50%;
   animation: aurora-float 20s infinite alternate ease-in-out;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
 }
 
 .blob-1 {
@@ -49,7 +49,7 @@
   right: -10%;
   width: 600px;
   height: 600px;
-  background: var(--accent-violet);
+  background: var(--accent-cyan);
   animation-delay: -5s;
 }
 
@@ -89,10 +89,6 @@
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
-  background: linear-gradient(180deg, #ffffff 0%, #d4d4d8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero-subtitle {
@@ -140,19 +136,19 @@
 
 /* Glassmorphic Secondary Button */
 .btn-glass {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(24, 30, 116, 0.05);
+  border: 1px solid rgba(24, 30, 116, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: var(--text-primary);
+  color: var(--accent-violet);
   transition: all 0.3s ease;
 }
 
 .btn-glass:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(24, 30, 116, 0.1);
+  border-color: rgba(24, 30, 116, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(24, 30, 116, 0.1);
 }
 
 .hero-image-container {
@@ -292,7 +288,7 @@
   padding: 60px 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  background-color: rgba(11, 11, 18, 0.5);
+  background-color: rgba(24, 30, 116, 0.03);
 }
 
 .metrics-grid {
@@ -432,7 +428,7 @@
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: var(--accent-indigo);
+  color: var(--accent-violet);
   letter-spacing: 0.1em;
   margin-bottom: 12px;
 }
@@ -522,7 +518,7 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--accent-indigo);
+  color: var(--accent-violet);
   margin-bottom: 8px;
   font-weight: 600;
 }
@@ -545,7 +541,7 @@
   gap: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--accent-violet);
 }
 
 .portfolio-card-link svg {
