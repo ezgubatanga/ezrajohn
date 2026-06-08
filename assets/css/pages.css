@@ -402,7 +402,7 @@
   background-color: var(--bg-primary);
   border: 3px solid var(--accent-indigo);
   left: 20px;
-  top: 8px;
+  top: 4px;
   margin-left: -6px;
   z-index: 1;
   transition: all 0.3s ease;
