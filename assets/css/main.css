@@ -433,9 +433,7 @@ header a, header .logo {
 }
 
 .card:hover {
-  border-color: var(--border-hover);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* --- FORM CONTROLS --- */
@@ -481,7 +479,7 @@ footer {
   padding: 80px 0;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
-  background: radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+  background-color: white;
 }
 
 .footer-cta h2 {
@@ -573,17 +571,18 @@ footer .logo, footer .logo span {
     padding-left: 24px;
     padding-right: 24px;
   }
+  .footer-bottom {
+    flex-direction: column-reverse;
+    gap: 16px;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
   }
 }
 

@@ -11,7 +11,7 @@
   padding-bottom: 0;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 50%, rgba(24, 30, 116, 0.05), var(--bg-primary));
+  background: white;
 }
 
 /* Ambient Aurora Background */
@@ -289,7 +289,7 @@
   padding: 60px 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  background-color: rgba(24, 30, 116, 0.03);
+  background-color: #fefcd5;
 }
 
 .metrics-grid {
@@ -344,15 +344,20 @@
   gap: 30px;
 }
 
+.growth-section {
+  background-color: white;
+}
+
 .pillar-card {
   height: 100%;
+  background-color: #fefcd5;
 }
 
 .pillar-icon {
   width: 50px;
   height: 50px;
   border-radius: 12px;
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(197, 21, 39, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,6 +479,41 @@
     grid-template-columns: 1fr;
     gap: 32px;
   }
+  .story-action {
+    text-align: center;
+  }
+}
+
+.career-section {
+  background-color: #c51527 !important;
+}
+.career-section h2 {
+  color: white !important;
+}
+.career-section h3.timeline-title {
+  color: #fefcd5 !important;
+}
+.career-section p, .career-section .timeline-company, .career-section .timeline-date {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+.career-section .btn-secondary {
+  color: white;
+  border-color: rgba(255,255,255,0.5);
+}
+.career-section .btn-secondary:hover {
+  background-color: white;
+  color: #c51527;
+}
+.career-section .timeline::after {
+  background-color: rgba(254, 252, 213, 0.25);
+}
+.career-section .timeline-item::after {
+  border-color: #fefcd5;
+  background-color: #c51527;
+}
+.career-section .timeline-item:hover::after {
+  background-color: #fefcd5;
+  box-shadow: 0 0 10px #fefcd5;
 }
 
 /* --- 5. SELECTED WORK & PORTFOLIO GRID --- */
@@ -481,6 +521,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 30px;
+}
+
+.portfolio-grid .card {
+  background-color: white;
 }
 
 .portfolio-card {
@@ -513,6 +557,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background-color: white;
 }
 
 .portfolio-card-category {
