@@ -39,6 +39,7 @@
 .hero-actions {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .hero-image-container {
