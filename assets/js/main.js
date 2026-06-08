@@ -176,8 +176,10 @@ function initCounterAnimations() {
         // Check if value is numeric or has special chars
         const isNumeric = /^\d+$/.test(targetValueStr.replace(/[^\d]/g, ''));
         if (isNumeric) {
-          const numberPart = parseFloat(targetValueStr.replace(/[^\d.]/g, ''));
-          const suffixPart = targetValueStr.replace(/[\d.]/g, '');
+          const match = targetValueStr.match(/^([^\d]*)([\d.]+)(.*)$/);
+          const prefixPart = match ? match[1] : '';
+          const numberPart = match ? parseFloat(match[2]) : parseFloat(targetValueStr.replace(/[^\d.]/g, ''));
+          const suffixPart = match ? match[3] : targetValueStr.replace(/[\d.]/g, '');
           
           let count = 0;
           const duration = 2000; // ms
@@ -195,7 +197,7 @@ function initCounterAnimations() {
               const formattedCount = targetValueStr.includes('.') 
                 ? count.toFixed(1) 
                 : Math.floor(count);
-              target.textContent = formattedCount + suffixPart;
+              target.textContent = prefixPart + formattedCount + suffixPart;
             }
           }, intervalTime);
         } else {
