@@ -330,6 +330,9 @@ header a, header .logo {
   }
   
   /* Hamburger animation */
+  .nav-toggle.active span {
+    background: var(--accent-cyan);
+  }
   .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
