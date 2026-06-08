@@ -160,9 +160,10 @@
 
 .premium-frame {
   position: relative;
-  width: 110%; /* Slightly bleed over the right column */
-  max-width: 750px; /* Allow it to get much larger on wide screens */
-  margin-right: -10%;
+  width: 130%; /* Bleed more */
+  max-width: 900px;
+  margin-right: -20%;
+  margin-top: -15%;
   height: auto;
   z-index: 2;
 }
