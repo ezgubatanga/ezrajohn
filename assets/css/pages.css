@@ -284,6 +284,13 @@
   color: var(--text-muted);
 }
 
+@media (max-width: 768px) {
+  .story-stats {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
 @media (max-width: 992px) {
   .success-story-card {
     grid-template-columns: 1fr;
