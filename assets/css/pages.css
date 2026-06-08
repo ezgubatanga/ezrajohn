@@ -289,7 +289,7 @@
   padding: 60px 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  background-color: #fefcd5;
+  background-color: #fffeea;
 }
 
 .metrics-grid {
@@ -350,7 +350,7 @@
 
 .pillar-card {
   height: 100%;
-  background-color: #fefcd5;
+  background-color: #fffeea;
 }
 
 .pillar-icon {
@@ -404,6 +404,7 @@
   grid-template-columns: 1fr 1.1fr;
   gap: 48px;
   align-items: center;
+  background-color: white;
 }
 
 .story-image {
@@ -491,7 +492,7 @@
   color: white !important;
 }
 .career-section h3.timeline-title {
-  color: #fefcd5 !important;
+  color: #fffeea !important;
 }
 .career-section p, .career-section .timeline-company, .career-section .timeline-date {
   color: rgba(255, 255, 255, 0.9) !important;
@@ -505,15 +506,15 @@
   color: #c51527;
 }
 .career-section .timeline::after {
-  background-color: rgba(254, 252, 213, 0.25);
+  background-color: rgba(255, 254, 234, 0.25);
 }
 .career-section .timeline-item::after {
-  border-color: #fefcd5;
+  border-color: #fffeea;
   background-color: #c51527;
 }
 .career-section .timeline-item:hover::after {
-  background-color: #fefcd5;
-  box-shadow: 0 0 10px #fefcd5;
+  background-color: #fffeea;
+  box-shadow: 0 0 10px #fffeea;
 }
 
 /* --- 5. SELECTED WORK & PORTFOLIO GRID --- */
