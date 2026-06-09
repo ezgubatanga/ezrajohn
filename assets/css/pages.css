@@ -744,6 +744,37 @@
 }
 
 /* --- 7. ABOUT PAGE & SKILLS MATRIX --- */
+.quick-fact-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.quick-fact-label {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  min-width: 110px;
+}
+
+.quick-fact-value {
+  text-align: right;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .quick-fact-item {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  .quick-fact-value {
+    text-align: left;
+  }
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
