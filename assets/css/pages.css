@@ -497,10 +497,15 @@
   color: var(--text-muted);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .story-stats {
-    grid-template-columns: 1fr;
-    text-align: center;
+    gap: 8px;
+  }
+  .story-stat-number {
+    font-size: 1.1rem;
+  }
+  .story-stat-label {
+    font-size: 0.65rem;
   }
 }
 
@@ -508,6 +513,9 @@
   .success-story-card {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+  .story-stats {
+    text-align: center;
   }
 }
 
