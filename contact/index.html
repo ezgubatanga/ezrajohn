@@ -32,6 +32,46 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/pages.css">
+  <style>
+    /* Hide CTA on contact page */
+    .footer-cta {
+      display: none !important;
+    }
+    /* Form BG Red */
+    .contact-form-card {
+      background-color: var(--accent-indigo) !important;
+      border-color: var(--accent-indigo) !important;
+      color: #ffffff;
+    }
+    .contact-form-card label {
+      color: #ffffff !important;
+    }
+    .contact-form-card .form-control {
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+    .contact-form-card .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .contact-form-card .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.15) !important;
+      border-color: #ffffff !important;
+    }
+    .contact-form-card select option {
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+    }
+    /* Button Cream */
+    #submit-btn {
+      background: var(--bg-primary) !important;
+      color: var(--accent-indigo) !important;
+      box-shadow: none !important;
+    }
+    #submit-btn:hover {
+      background: #ffffff !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -155,7 +195,7 @@
 
             <div class="form-group">
               <label for="role">Role / Project Scope</label>
-              <select id="role" name="role" class="form-control" style="background-color: #0b0b12;">
+              <select id="role" name="role" class="form-control">
                 <option value="recruiter">Full-time Recruitment</option>
                 <option value="freelance">Freelance / Project Inquiry</option>
                 <option value="consultation">Consultation</option>
