@@ -267,6 +267,10 @@ header .logo {
   /* Light text for blue header */
 }
 
+.mobile-only-socials {
+  display: none;
+}
+
 .nav-links a:hover {
   color: #ffffff;
 }
@@ -348,6 +352,19 @@ header .logo {
   .nav-links a:hover,
   .nav-links a.active {
     color: var(--accent-indigo);
+  }
+  
+  .mobile-only-socials {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .mobile-only-socials .social-icon:hover {
+    background: transparent;
+    color: var(--accent-indigo);
+    border-color: var(--border-color);
   }
 
   /* Hamburger animation */
