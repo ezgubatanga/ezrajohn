@@ -187,9 +187,9 @@ function initCounterAnimations() {
           let intervalTime = 20; // ms
           let increment = numberPart / (duration / intervalTime);
 
-          // Use increments of 50 for large numbers (like 1000+)
+          // Use increments of 10 for large numbers (like 1000+)
           if (numberPart >= 1000) {
-            increment = 50;
+            increment = 10;
             intervalTime = duration / (numberPart / increment);
             if (intervalTime < 20) {
               intervalTime = 20;
