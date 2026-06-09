@@ -176,16 +176,26 @@ function initCounterAnimations() {
         // Check if value is numeric or has special chars
         const isNumeric = /^\d+$/.test(targetValueStr.replace(/[^\d]/g, ''));
         if (isNumeric) {
-          const match = targetValueStr.match(/^([^\d]*)([\d.]+)(.*)$/);
+          const match = targetValueStr.match(/^([^\d]*)([\d.,]+)(.*)$/);
           const prefixPart = match ? match[1] : '';
-          const numberPart = match ? parseFloat(match[2]) : parseFloat(targetValueStr.replace(/[^\d.]/g, ''));
-          const suffixPart = match ? match[3] : targetValueStr.replace(/[\d.]/g, '');
+          const numberString = match ? match[2].replace(/,/g, '') : targetValueStr.replace(/[^\d.]/g, '');
+          const numberPart = parseFloat(numberString);
+          const suffixPart = match ? match[3] : targetValueStr.replace(/[\d.,]/g, '');
           
           let count = 0;
           const duration = 2000; // ms
-          const intervalTime = 20; // ms
-          const steps = duration / intervalTime;
-          const increment = numberPart / steps;
+          let intervalTime = 20; // ms
+          let increment = numberPart / (duration / intervalTime);
+
+          // Use increments of 50 for large numbers (like 1000+)
+          if (numberPart >= 1000) {
+            increment = 50;
+            intervalTime = duration / (numberPart / increment);
+            if (intervalTime < 20) {
+              intervalTime = 20;
+              increment = numberPart / (duration / intervalTime);
+            }
+          }
 
           const timer = setInterval(() => {
             count += increment;
@@ -193,10 +203,13 @@ function initCounterAnimations() {
               target.textContent = targetValueStr;
               clearInterval(timer);
             } else {
-              // Format with decimals if originally had them
-              const formattedCount = targetValueStr.includes('.') 
-                ? count.toFixed(1) 
-                : Math.floor(count);
+              // Format with decimals if originally had them, otherwise add commas
+              let formattedCount;
+              if (targetValueStr.includes('.')) {
+                formattedCount = count.toFixed(1);
+              } else {
+                formattedCount = Math.floor(count).toLocaleString('en-US');
+              }
               target.textContent = prefixPart + formattedCount + suffixPart;
             }
           }, intervalTime);
