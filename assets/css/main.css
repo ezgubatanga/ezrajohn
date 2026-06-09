@@ -518,8 +518,8 @@ header .logo {
 footer {
   margin-top: auto;
   border-top: 1px solid var(--border-color);
-  background-color: var(--bg-primary);
-  /* Cream background */
+  background-color: var(--accent-indigo);
+  color: var(--bg-primary);
 }
 
 .footer-cta {
@@ -540,7 +540,7 @@ footer {
 
 footer .logo,
 footer .logo span {
-  color: var(--accent-indigo);
+  color: var(--bg-primary);
 }
 
 .footer-grid {
@@ -553,6 +553,7 @@ footer .logo span {
 .footer-info p {
   margin: 16px 0 24px 0;
   max-width: 320px;
+  color: var(--bg-primary);
 }
 
 .footer-socials {
@@ -567,16 +568,16 @@ footer .logo span {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-color);
-  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--bg-primary);
   font-size: 1.1rem;
 }
 
 .social-icon:hover {
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  border-color: var(--text-primary);
+  background: var(--bg-primary);
+  color: var(--accent-indigo);
+  border-color: var(--bg-primary);
   transform: translateY(-2px);
 }
 
@@ -585,7 +586,7 @@ footer .logo span {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 24px;
-  color: var(--text-primary);
+  color: var(--bg-primary);
 }
 
 .footer-links-col ul {
@@ -596,12 +597,12 @@ footer .logo span {
 }
 
 .footer-links-col a {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+  color: var(--bg-primary);
 }
 
 .footer-links-col a:hover {
-  color: var(--text-primary);
+  color: var(--bg-primary);
+  opacity: 0.8;
 }
 
 .footer-bottom {
@@ -609,8 +610,8 @@ footer .logo span {
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
-  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--bg-primary);
   font-size: 0.85rem;
 }
 
