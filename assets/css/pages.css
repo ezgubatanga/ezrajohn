@@ -834,7 +834,7 @@
 
 .skills-list span:hover {
   background-color: rgba(99, 102, 241, 0.05);
-  border-color: var(--accent-indigo);
+  border-color: blue;
   color: var(--text-primary);
 }
 
