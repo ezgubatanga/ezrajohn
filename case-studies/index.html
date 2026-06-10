@@ -38,10 +38,28 @@
     html {
       scroll-padding-top: calc(var(--header-height) + 20px);
     }
+
+    /* Hover Magic Overlay */
+    body:has(.video-container:hover) #video-overlay {
+      opacity: 1;
+    }
+
+    .video-container {
+      transition: z-index 0s, transform 0.3s ease;
+    }
+
+    .video-container:hover {
+      position: relative;
+      z-index: 100;
+      transform: scale(1.02);
+    }
   </style>
 </head>
 
 <body>
+  <div id="video-overlay"
+    style="position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 90; opacity: 0; pointer-events: none; transition: opacity 0.5s ease;">
+  </div>
 
   <!-- Decorative Grid Background Layer -->
   <div class="grid-bg"></div>
@@ -103,7 +121,7 @@
               </div>
               <div style="flex: 1; min-width: 280px; display: flex; justify-content: center;">
                 <img src="/assets/images/IMG_1733-opt.jpg" alt="Betty's Storefront"
-                  style="width: 280px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); object-fit: cover;" />
+                  style="width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); object-fit: cover;" />
               </div>
             </div>
           </div>
@@ -119,16 +137,16 @@
                   <li><strong>Sensory Content Pipeline:</strong> Highlighting heritage food styling, warm color
                     palettes,
                     and behind-the-scenes bakery preparation to drive emotional resonance on social grids.</li>
-                  <li><strong>Hyper-Local Awareness Ads:</strong> Deploying localized Meta Ads mapped to a 5-kilometer
-                    radius around the restaurant location, targeting food enthusiasts, families, and neighborhood groups
+                  <li><strong>Hyper-Local Awareness Ads:</strong> Deploying localized Meta Ads mapped to the city
+                    limits, radius around the restaurant location, targeting food enthusiasts, families, and
+                    neighborhood groups
                     with grand-opening event incentives.</li>
                 </ul>
               </div>
-              <div style="flex: 1; min-width: 280px; display: flex; justify-content: center;">
+              <div class="video-container" style="flex: 1; min-width: 280px; display: flex; justify-content: center;">
                 <iframe
-                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1893116434867221&show_text=false&width=280"
-                  width="280" height="498"
-                  style="border:none;overflow:hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1893116434867221&show_text=false"
+                  style="width: 100%; aspect-ratio: 9/16; border:none;overflow:hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
                   scrolling="no" frameborder="0" allowfullscreen="true"
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
               </div>
@@ -150,7 +168,7 @@
               <li>Structured an in-store Google review campaign where staff encouraged real-time reviews from satisfied
                 customers.</li>
             </ul>
-            <div style="margin-top: 32px; width: 100%;">
+            <div class="video-container" style="margin-top: 32px; width: 100%;">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F620104494129720&show_text=false"
                 style="width: 100%; aspect-ratio: 16/9; border:none;overflow:hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
