@@ -421,7 +421,7 @@ header .logo {
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: blue;
   transform: translateY(-2px);
 }
 
